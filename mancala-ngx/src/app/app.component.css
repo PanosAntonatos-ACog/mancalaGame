@@ -1,0 +1,118 @@
+.board
+{
+  display:flex;
+  background-color:SaddleBrown;
+  height:300px;
+  border-radius:50px;
+  padding:30px;
+}
+
+.section
+{
+  background-color:rgba(255, 255, 255, 0.03);
+  margin:5px;
+}
+
+.endsection
+{
+  display:flex;
+  flex-grow:1;
+}
+
+.midsection
+{
+  display:flex;
+  flex-direction:column;
+  flex-grow:6;
+}
+
+.midrow
+{
+  display:flex;
+  flex-grow:1;
+}
+
+.pot
+{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.08);
+  flex-grow: 1;
+  margin: 5px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 27px;
+}
+
+.bead
+{
+  position:absolute;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+}
+
+
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  .disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+  }

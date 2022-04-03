@@ -1,0 +1,87 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img
+    width="40"
+    alt="Mancala Logo"
+    src="./assets/mancala.png"
+  />
+  <span class="h2">Welcome to Mancala Game</span>
+    <div class="spacer"></div>
+</div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="mt-3 col-md-6" *ngIf="showFirstStep">
+      <form #f="ngForm" (ngSubmit)="initializeGame(f)">
+        
+          <label for="exampleFormControlInput1" class="form-label">First Player Username</label>
+          <input type="text" class="form-control" placeholder="Will Smith" name="userName" ngModel required #first="ngModel"> 
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary mt-2">Submit</button>
+        </div>
+      </form>
+    </div>
+
+      <div class="mt-3  col-md-6" *ngIf="showSecondStep">
+      <form #g="ngForm" (ngSubmit)="addSecondPlayer(g)">
+       
+          <label for="exampleFormControlInput1" class="form-label">Second Player Username</label>
+          <input type="text" class="form-control" placeholder="Chris Rock" name="secondPlayerName" ngModel required #second="ngModel"> 
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary mt-2">Submit</button>
+        </div>
+      </form>
+    </div>
+    
+    <div *ngIf="!showSecondStep && !showFirstStep">
+
+      <div class="row mt-2">
+        <div class="col-md-6" *ngFor="let player of board?.players; let i = index" [ngClass]="{'text-success':board?.playerTurn?.playerToMoveId==player.id, 'text-danger':board?.playerTurn?.playerToMoveId!=player.id}">
+          <div *ngIf="i==0" class="h3">
+            Player 1: {{player.playerName}}
+          </div>
+          
+          <div *ngIf="i==1" class="h3" style="text-align:right">
+            Player 2: {{player.playerName}}
+          </div>
+
+        </div>
+      </div>
+    
+      <div class="board mt-3">
+        <div class="section endsection">
+            <div class="pot" style="padding-top: 80px;" id="mb">
+              {{board.pits[13].numberOfStones}}
+              <!-- {{board.pits[13].pitPosition}} -->
+            </div> 
+        </div>
+        <div class="section midsection">
+          <div class="midrow topmid">
+            <div *ngFor='let pit of pitListPlayerB' class="pot" (click)="nextMove(board.id, pit.pitPosition)">
+              {{pit.numberOfStones}}
+              <!-- {{pit.pitPosition}} -->
+            </div>
+          </div>
+          <div class="midrow botmid">
+            <div *ngFor='let pit of pitListPlayerA' class="pot" (click)="nextMove(board.id, pit.pitPosition)">
+              {{pit.numberOfStones}}
+              <!-- {{pit.pitPosition}} -->
+            </div>
+          </div>
+        </div>
+        <div class="section endsection">
+            <div class="pot" style="padding-top: 80px;"  id="mt">
+              {{board.pits[6].numberOfStones}}
+              <!-- {{board.pits[6].pitPosition}} -->
+            </div>        
+        </div>
+      </div>
+    </div>
+    
+    
+
+  </div>
+  </div>
