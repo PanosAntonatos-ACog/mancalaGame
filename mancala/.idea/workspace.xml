@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b49395b-fae5-4e2e-9e66-63baf52c152f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/cdc/BaseClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/controller/GameControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/redis/EmbeddedRedis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/repository/BoardRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/repository/PitRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/repository/PlayerMoveRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/repository/PlayerRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/service/BoardServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/service/GameServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/service/PitServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/service/PlayerMoveServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/assessment/bol/mancala/service/PlayerServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/bootstrap.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/mancala-creation.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/mancala-sow-2.json" afterDir="false" />
-    </list>
+    <list default="true" id="8b49395b-fae5-4e2e-9e66-63baf52c152f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +178,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648985643452</updated>
-      <workItem from="1648985644772" duration="13076000" />
+      <workItem from="1648985644772" duration="13375000" />
     </task>
     <servers />
   </component>
