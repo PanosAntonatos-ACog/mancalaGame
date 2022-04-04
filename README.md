@@ -2,11 +2,6 @@
 
 ## This is an implementation of the well known Mancala or Kalah game.
 
-<a href="https://www.linkedin.com/in/panosantonatos/">
-<img alt="LinkedIn" src="https://github.com/PanosAntonatos-ACog/mancalaGame/blob/main/mancala-ngx/src/assets/linkedin.png"/>
-</a>
-
-
 ### Description
 
 Welcome Onboard fellow Developer,
