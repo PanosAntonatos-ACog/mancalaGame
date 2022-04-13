@@ -71,8 +71,7 @@ public class BoardService {
 
         int stones = selectedPit.getNumberOfStones();
 //      Return if the chosen pit has 0 pitstones
-        if (stones == 0)
-            return board;
+        if (stones == 0) return board;
 
         selectedPit.setNumberOfStones(0);
 
@@ -80,14 +79,13 @@ public class BoardService {
         board.setCurrentPitIndex(pitPosition);
 
 //      range over the stones except the last one to sow them to the following pits
-        IntStream.range(0, stones - 1)
-                .forEach(index -> {
-                    try {
-                        sowRight(board, false);
-                    } catch (ResourceNotFoundException e) {
-                        e.printStackTrace();
-                    }
-                });
+        IntStream.range(0, stones - 1).forEach(index -> {
+            try {
+                sowRight(board, false);
+            } catch (ResourceNotFoundException e) {
+                e.printStackTrace();
+            }
+        });
 
 
 //      sow the last one
@@ -96,8 +94,7 @@ public class BoardService {
         int currentPitIndex = board.getCurrentPitIndex();
 
 //      we switch the turn if the last sow was not on any of pit houses (left or right)
-        if (currentPitIndex != 7 && currentPitIndex != 14)
-            board.setPlayerTurn(utils.changePlayerTurn(board));
+        if (currentPitIndex != 7 && currentPitIndex != 14) board.setPlayerTurn(utils.changePlayerTurn(board));
 
         return board;
 
@@ -110,8 +107,7 @@ public class BoardService {
         PlayerTurn playerTurn = board.getPlayerTurn();
         Player playerToPlay = board.getPlayers().stream().filter(player -> player.getId().equals(playerTurn.getPlayerToMoveId())).findFirst().orElseThrow(ResourceNotFoundException::new);
 
-        if ((currentPitIndex == 7 && playerToPlay.getPlayingOrder().equals(2)) ||
-                (currentPitIndex == 14 && playerToPlay.getPlayingOrder().equals(1)))
+        if ((currentPitIndex == 7 && playerToPlay.getPlayingOrder().equals(2)) || (currentPitIndex == 14 && playerToPlay.getPlayingOrder().equals(1)))
             currentPitIndex = currentPitIndex % 14 + 1;
 
         board.setCurrentPitIndex(currentPitIndex);
